@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.9">
+
+  <model name="skyscrub">
+
+    <pose>0 0 0.48 0 0 0</pose>
+    <static>false</static>
+
+    <link name="base_link">
+
+      <inertial>
+        <mass>12.0</mass>
+        <inertia>
+          <ixx>1.0</ixx>
+          <iyy>1.0</iyy>
+          <izz>1.8</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="main_body_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.18</radius>
+            <length>0.12</length>
+          </cylinder>
+        </geometry>
+      </visual>
+
+      <collision name="main_body_collision">
+        <geometry>
+          <cylinder>
+            <radius>0.18</radius>
+            <length>0.12</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      
+      <visual name="arm_0_visual">
+        <pose>0.000000 0.351000 0.02 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.702000 0.040 0.040</size>
+          </box>
+        </geometry>
+      </visual>
+
+      <collision name="arm_0_collision">
+        <pose>0.000000 0.351000 0.02 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.702000 0.035 0.035</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="arm_1_visual">
+        <pose>0.000000 -0.351000 0.02 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.702000 0.040 0.040</size>
+          </box>
+        </geometry>
+      </visual>
+
+      <collision name="arm_1_collision">
+        <pose>0.000000 -0.351000 0.02 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.702000 0.035 0.035</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="arm_2_visual">
+        <pose>0.303975 -0.175500 0.02 0 0 -0.52359878</pose>
+        <geometry>
+          <box>
+            <size>0.702000 0.040 0.040</size>
+          </box>
+        </geometry>
+      </visual>
+
+      <collision name="arm_2_collision">
+        <pose>0.303975 -0.175500 0.02 0 0 -0.52359878</pose>
+        <geometry>
+          <box>
+            <size>0.702000 0.035 0.035</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="arm_3_visual">
+        <pose>-0.303975 0.175500 0.02 0 0 2.61799388</pose>
+        <geometry>
+          <box>
+            <size>0.702000 0.040 0.040</size>
+          </box>
+        </geometry>
+      </visual>
+
+      <collision name="arm_3_collision">
+        <pose>-0.303975 0.175500 0.02 0 0 2.61799388</pose>
+        <geometry>
+          <box>
+            <size>0.702000 0.035 0.035</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="arm_4_visual">
+        <pose>0.303975 0.175500 0.02 0 0 0.52359878</pose>
+        <geometry>
+          <box>
+            <size>0.702000 0.040 0.040</size>
+          </box>
+        </geometry>
+      </visual>
+
+      <collision name="arm_4_collision">
+        <pose>0.303975 0.175500 0.02 0 0 0.52359878</pose>
+        <geometry>
+          <box>
+            <size>0.702000 0.035 0.035</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="arm_5_visual">
+        <pose>-0.303975 -0.175500 0.02 0 0 -2.61799388</pose>
+        <geometry>
+          <box>
+            <size>0.702000 0.040 0.040</size>
+          </box>
+        </geometry>
+      </visual>
+
+      <collision name="arm_5_collision">
+        <pose>-0.303975 -0.175500 0.02 0 0 -2.61799388</pose>
+        <geometry>
+          <box>
+            <size>0.702000 0.035 0.035</size>
+          </box>
+        </geometry>
+      </collision>
+      <sensor name="air_pressure_sensor" type="air_pressure">
+        <gz_frame_id>base_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>50</update_rate>
+        <air_pressure>
+          <pressure>
+            <noise type="gaussian">
+              <mean>0</mean>
+              <stddev>3</stddev>
+            </noise>
+          </pressure>
+        </air_pressure>
+      </sensor>
+      <sensor name="magnetometer_sensor" type="magnetometer">
+        <gz_frame_id>base_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <magnetometer>
+          <x>
+            <noise type="gaussian">
+              <mean>0</mean>
+              <stddev>0.0001</stddev>
+            </noise>
+          </x>
+          <y>
+            <noise type="gaussian">
+              <mean>0</mean>
+              <stddev>0.0001</stddev>
+            </noise>
+          </y>
+          <z>
+            <noise type="gaussian">
+              <mean>0</mean>
+              <stddev>0.0001</stddev>
+            </noise>
+          </z>
+        </magnetometer>
+      </sensor>
+      <sensor name="imu_sensor" type="imu">
+        <gz_frame_id>base_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>250</update_rate>
+
+        <imu>
+          <angular_velocity>
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0008726646</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0008726646</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0008726646</stddev>
+              </noise>
+            </z>
+          </angular_velocity>
+
+          <linear_acceleration>
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.00637</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.00637</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.00686</stddev>
+              </noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+      </sensor>
+      <sensor name="navsat_sensor" type="navsat">
+        <gz_frame_id>base_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+      </sensor>
+
+    </link>
+
+    
+    <link name="rotor_0">
+      <pose>0.000000 0.702000 0.10 0 0 0</pose>
+
+      <gravity>true</gravity>
+
+      <inertial>
+        <mass>0.03</mass>
+        <inertia>
+          <ixx>0.00070</ixx>
+          <iyy>0.00070</iyy>
+          <izz>0.00140</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="rotor_0_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.305</radius>
+            <length>0.008</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="rotor_0_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>rotor_0</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <link name="rotor_1">
+      <pose>0.000000 -0.702000 0.10 0 0 0</pose>
+
+      <gravity>true</gravity>
+
+      <inertial>
+        <mass>0.03</mass>
+        <inertia>
+          <ixx>0.00070</ixx>
+          <iyy>0.00070</iyy>
+          <izz>0.00140</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="rotor_1_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.305</radius>
+            <length>0.008</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="rotor_1_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>rotor_1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <link name="rotor_2">
+      <pose>0.607950 -0.351000 0.10 0 0 0</pose>
+
+      <gravity>true</gravity>
+
+      <inertial>
+        <mass>0.03</mass>
+        <inertia>
+          <ixx>0.00070</ixx>
+          <iyy>0.00070</iyy>
+          <izz>0.00140</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="rotor_2_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.305</radius>
+            <length>0.008</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="rotor_2_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>rotor_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <link name="rotor_3">
+      <pose>-0.607950 0.351000 0.10 0 0 0</pose>
+
+      <gravity>true</gravity>
+
+      <inertial>
+        <mass>0.03</mass>
+        <inertia>
+          <ixx>0.00070</ixx>
+          <iyy>0.00070</iyy>
+          <izz>0.00140</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="rotor_3_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.305</radius>
+            <length>0.008</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="rotor_3_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>rotor_3</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <link name="rotor_4">
+      <pose>0.607950 0.351000 0.10 0 0 0</pose>
+
+      <gravity>true</gravity>
+
+      <inertial>
+        <mass>0.03</mass>
+        <inertia>
+          <ixx>0.00070</ixx>
+          <iyy>0.00070</iyy>
+          <izz>0.00140</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="rotor_4_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.305</radius>
+            <length>0.008</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="rotor_4_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>rotor_4</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <link name="rotor_5">
+      <pose>-0.607950 -0.351000 0.10 0 0 0</pose>
+
+      <gravity>true</gravity>
+
+      <inertial>
+        <mass>0.03</mass>
+        <inertia>
+          <ixx>0.00070</ixx>
+          <iyy>0.00070</iyy>
+          <izz>0.00140</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="rotor_5_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.305</radius>
+            <length>0.008</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="rotor_5_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>rotor_5</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+
+    
+    <plugin filename="gz-sim-multicopter-motor-model-system"
+            name="gz::sim::systems::MulticopterMotorModel">
+
+      <jointName>rotor_0_joint</jointName>
+      <linkName>rotor_0</linkName>
+
+      <turningDirection>cw</turningDirection>
+
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+
+      <maxRotVelocity>800</maxRotVelocity>
+      <motorConstant>0.00017</motorConstant>
+      <momentConstant>0.016</momentConstant>
+
+      <commandSubTopic>command/motor_speed</commandSubTopic>
+      <motorNumber>0</motorNumber>
+
+      <rotorDragCoefficient>0.000106428</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+      <motorType>velocity</motorType>
+    </plugin>
+
+    <plugin filename="gz-sim-multicopter-motor-model-system"
+            name="gz::sim::systems::MulticopterMotorModel">
+
+      <jointName>rotor_1_joint</jointName>
+      <linkName>rotor_1</linkName>
+
+      <turningDirection>ccw</turningDirection>
+
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+
+      <maxRotVelocity>800</maxRotVelocity>
+      <motorConstant>0.00017</motorConstant>
+      <momentConstant>0.016</momentConstant>
+
+      <commandSubTopic>command/motor_speed</commandSubTopic>
+      <motorNumber>1</motorNumber>
+
+      <rotorDragCoefficient>0.000106428</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+      <motorType>velocity</motorType>
+    </plugin>
+
+    <plugin filename="gz-sim-multicopter-motor-model-system"
+            name="gz::sim::systems::MulticopterMotorModel">
+
+      <jointName>rotor_2_joint</jointName>
+      <linkName>rotor_2</linkName>
+
+      <turningDirection>cw</turningDirection>
+
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+
+      <maxRotVelocity>800</maxRotVelocity>
+      <motorConstant>0.00017</motorConstant>
+      <momentConstant>0.016</momentConstant>
+
+      <commandSubTopic>command/motor_speed</commandSubTopic>
+      <motorNumber>2</motorNumber>
+
+      <rotorDragCoefficient>0.000106428</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+      <motorType>velocity</motorType>
+    </plugin>
+
+    <plugin filename="gz-sim-multicopter-motor-model-system"
+            name="gz::sim::systems::MulticopterMotorModel">
+
+      <jointName>rotor_3_joint</jointName>
+      <linkName>rotor_3</linkName>
+
+      <turningDirection>ccw</turningDirection>
+
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+
+      <maxRotVelocity>800</maxRotVelocity>
+      <motorConstant>0.00017</motorConstant>
+      <momentConstant>0.016</momentConstant>
+
+      <commandSubTopic>command/motor_speed</commandSubTopic>
+      <motorNumber>3</motorNumber>
+
+      <rotorDragCoefficient>0.000106428</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+      <motorType>velocity</motorType>
+    </plugin>
+
+    <plugin filename="gz-sim-multicopter-motor-model-system"
+            name="gz::sim::systems::MulticopterMotorModel">
+
+      <jointName>rotor_4_joint</jointName>
+      <linkName>rotor_4</linkName>
+
+      <turningDirection>ccw</turningDirection>
+
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+
+      <maxRotVelocity>800</maxRotVelocity>
+      <motorConstant>0.00017</motorConstant>
+      <momentConstant>0.016</momentConstant>
+
+      <commandSubTopic>command/motor_speed</commandSubTopic>
+      <motorNumber>4</motorNumber>
+
+      <rotorDragCoefficient>0.000106428</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+      <motorType>velocity</motorType>
+    </plugin>
+
+    <plugin filename="gz-sim-multicopter-motor-model-system"
+            name="gz::sim::systems::MulticopterMotorModel">
+
+      <jointName>rotor_5_joint</jointName>
+      <linkName>rotor_5</linkName>
+
+      <turningDirection>cw</turningDirection>
+
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+
+      <maxRotVelocity>800</maxRotVelocity>
+      <motorConstant>0.00017</motorConstant>
+      <momentConstant>0.016</momentConstant>
+
+      <commandSubTopic>command/motor_speed</commandSubTopic>
+      <motorNumber>5</motorNumber>
+
+      <rotorDragCoefficient>0.000106428</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+      <motorType>velocity</motorType>
+    </plugin>
+
+
+  </model>
+
+</sdf>

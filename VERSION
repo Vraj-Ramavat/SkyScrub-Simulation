@@ -1,0 +1,17 @@
+SkyScrub Simulation
+Version: V0.1
+Status: Six-motor PX4 + Gazebo flight validated
+
+Validated:
+- 6-motor hexacopter
+- PX4 SITL
+- Gazebo Harmonic
+- IMU
+- accelerometer
+- gyro
+- magnetometer
+- barometer
+- GPS/EKF
+- takeoff
+- hold
+- landing
