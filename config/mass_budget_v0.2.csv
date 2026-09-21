@@ -1,0 +1,20 @@
+component,quantity,mass_each_kg,status,notes
+EFT E610P frame,1,5.920,VERIFIED,EFT official frame net mass
+EFT E610P empty tank,1,1.110,VERIFIED,EFT official tank net mass
+Hobbywing X6 180KV propulsion combo,6,0.765,VERIFIED,Hobbywing official combo mass including prop
+JIYI K++ flight controller kit,1,0.321,VERIFIED,JIYI official controller kit net mass
+Front obstacle avoidance radar,1,0.080,VERIFIED,JIYI radar specification
+Rear obstacle avoidance radar,1,0.080,VERIFIED,JIYI radar specification
+Terrain following radar,1,0.050,PROVISIONAL,official specification is less than 50g; 50g used conservatively
+Raspberry Pi Camera Module 2 8MP,1,0.003,VERIFIED,Raspberry Pi official camera mass
+Raspberry Pi 5 4GB,1,0.046,PROVISIONAL,board-only planning mass
+Tattu Plus 1.0 Compact 16000mAh 12S battery,1,4.250,VERIFIED,Grepow official net mass
+Low-flow mist diaphragm pump 1-2Lmin,1,0.350,PROVISIONAL,BOM states approximately 300-350g; upper value used
+Peristaltic dosing pump 5-40mlmin,1,0.093,VERIFIED,matching product specification
+Surfactant reservoir plus concentrate,1,,TBD,container and carried chemical mass still required
+Fog mist nozzles hose valves fittings,1,,TBD,final plumbing configuration required
+Mini brushless drying blower,1,,TBD,exact selected blower required
+Additional waterproof wiring connectors,1,,TBD,final wiring harness required
+Camera Pi vibration mount enclosure,1,,TBD,final mount and enclosure required
+Miscellaneous fasteners mounts harnesses,1,,TBD,final installation hardware required
+Remaining accessory installation allowance,1,2.000,PROVISIONAL,Temporary conservative allowance covering all TBD accessory rows; remove once exact parts are selected/weighed
