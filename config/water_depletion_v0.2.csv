@@ -1,0 +1,9 @@
+parameter,value,unit
+initial_water_mass,8.0,kg
+packet_mass,0.25,kg
+packet_count,32,count
+nominal_flow_rate,1.5,L/min
+packet_interval,10.0,s
+nominal_drain_time,320,s
+dry_vehicle_mass,18.893,kg
+initial_vehicle_mass,26.893,kg

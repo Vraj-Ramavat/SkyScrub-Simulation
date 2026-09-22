@@ -5,11 +5,11 @@
     <static>false</static>
     <link name="base_link">
       <inertial>
-        <mass>26.251000</mass>
+        <mass>18.251000</mass>
         <inertia>
-          <ixx>1.786377</ixx>
-          <iyy>1.786377</iyy>
-          <izz>3.327009</izz>
+          <ixx>1.629577</ixx>
+          <iyy>1.629577</iyy>
+          <izz>3.133409</izz>
         </inertia>
       </inertial>
       <visual name="main_body_visual">
@@ -472,6 +472,742 @@
       <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
       <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       <motorType>velocity</motorType>
+    </plugin>
+    <model name="water_packet_00">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_00</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/00</detach_topic>
+      <attach_topic>/skyscrub/water/attach/00</attach_topic>
+      <output_topic>/skyscrub/water/state/00</output_topic>
+    </plugin>
+    <model name="water_packet_01">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_01</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/01</detach_topic>
+      <attach_topic>/skyscrub/water/attach/01</attach_topic>
+      <output_topic>/skyscrub/water/state/01</output_topic>
+    </plugin>
+    <model name="water_packet_02">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_02</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/02</detach_topic>
+      <attach_topic>/skyscrub/water/attach/02</attach_topic>
+      <output_topic>/skyscrub/water/state/02</output_topic>
+    </plugin>
+    <model name="water_packet_03">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_03</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/03</detach_topic>
+      <attach_topic>/skyscrub/water/attach/03</attach_topic>
+      <output_topic>/skyscrub/water/state/03</output_topic>
+    </plugin>
+    <model name="water_packet_04">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_04</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/04</detach_topic>
+      <attach_topic>/skyscrub/water/attach/04</attach_topic>
+      <output_topic>/skyscrub/water/state/04</output_topic>
+    </plugin>
+    <model name="water_packet_05">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_05</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/05</detach_topic>
+      <attach_topic>/skyscrub/water/attach/05</attach_topic>
+      <output_topic>/skyscrub/water/state/05</output_topic>
+    </plugin>
+    <model name="water_packet_06">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_06</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/06</detach_topic>
+      <attach_topic>/skyscrub/water/attach/06</attach_topic>
+      <output_topic>/skyscrub/water/state/06</output_topic>
+    </plugin>
+    <model name="water_packet_07">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_07</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/07</detach_topic>
+      <attach_topic>/skyscrub/water/attach/07</attach_topic>
+      <output_topic>/skyscrub/water/state/07</output_topic>
+    </plugin>
+    <model name="water_packet_08">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_08</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/08</detach_topic>
+      <attach_topic>/skyscrub/water/attach/08</attach_topic>
+      <output_topic>/skyscrub/water/state/08</output_topic>
+    </plugin>
+    <model name="water_packet_09">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_09</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/09</detach_topic>
+      <attach_topic>/skyscrub/water/attach/09</attach_topic>
+      <output_topic>/skyscrub/water/state/09</output_topic>
+    </plugin>
+    <model name="water_packet_10">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_10</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/10</detach_topic>
+      <attach_topic>/skyscrub/water/attach/10</attach_topic>
+      <output_topic>/skyscrub/water/state/10</output_topic>
+    </plugin>
+    <model name="water_packet_11">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_11</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/11</detach_topic>
+      <attach_topic>/skyscrub/water/attach/11</attach_topic>
+      <output_topic>/skyscrub/water/state/11</output_topic>
+    </plugin>
+    <model name="water_packet_12">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_12</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/12</detach_topic>
+      <attach_topic>/skyscrub/water/attach/12</attach_topic>
+      <output_topic>/skyscrub/water/state/12</output_topic>
+    </plugin>
+    <model name="water_packet_13">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_13</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/13</detach_topic>
+      <attach_topic>/skyscrub/water/attach/13</attach_topic>
+      <output_topic>/skyscrub/water/state/13</output_topic>
+    </plugin>
+    <model name="water_packet_14">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_14</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/14</detach_topic>
+      <attach_topic>/skyscrub/water/attach/14</attach_topic>
+      <output_topic>/skyscrub/water/state/14</output_topic>
+    </plugin>
+    <model name="water_packet_15">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_15</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/15</detach_topic>
+      <attach_topic>/skyscrub/water/attach/15</attach_topic>
+      <output_topic>/skyscrub/water/state/15</output_topic>
+    </plugin>
+    <model name="water_packet_16">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_16</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/16</detach_topic>
+      <attach_topic>/skyscrub/water/attach/16</attach_topic>
+      <output_topic>/skyscrub/water/state/16</output_topic>
+    </plugin>
+    <model name="water_packet_17">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_17</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/17</detach_topic>
+      <attach_topic>/skyscrub/water/attach/17</attach_topic>
+      <output_topic>/skyscrub/water/state/17</output_topic>
+    </plugin>
+    <model name="water_packet_18">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_18</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/18</detach_topic>
+      <attach_topic>/skyscrub/water/attach/18</attach_topic>
+      <output_topic>/skyscrub/water/state/18</output_topic>
+    </plugin>
+    <model name="water_packet_19">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_19</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/19</detach_topic>
+      <attach_topic>/skyscrub/water/attach/19</attach_topic>
+      <output_topic>/skyscrub/water/state/19</output_topic>
+    </plugin>
+    <model name="water_packet_20">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_20</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/20</detach_topic>
+      <attach_topic>/skyscrub/water/attach/20</attach_topic>
+      <output_topic>/skyscrub/water/state/20</output_topic>
+    </plugin>
+    <model name="water_packet_21">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_21</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/21</detach_topic>
+      <attach_topic>/skyscrub/water/attach/21</attach_topic>
+      <output_topic>/skyscrub/water/state/21</output_topic>
+    </plugin>
+    <model name="water_packet_22">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_22</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/22</detach_topic>
+      <attach_topic>/skyscrub/water/attach/22</attach_topic>
+      <output_topic>/skyscrub/water/state/22</output_topic>
+    </plugin>
+    <model name="water_packet_23">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_23</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/23</detach_topic>
+      <attach_topic>/skyscrub/water/attach/23</attach_topic>
+      <output_topic>/skyscrub/water/state/23</output_topic>
+    </plugin>
+    <model name="water_packet_24">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_24</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/24</detach_topic>
+      <attach_topic>/skyscrub/water/attach/24</attach_topic>
+      <output_topic>/skyscrub/water/state/24</output_topic>
+    </plugin>
+    <model name="water_packet_25">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_25</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/25</detach_topic>
+      <attach_topic>/skyscrub/water/attach/25</attach_topic>
+      <output_topic>/skyscrub/water/state/25</output_topic>
+    </plugin>
+    <model name="water_packet_26">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_26</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/26</detach_topic>
+      <attach_topic>/skyscrub/water/attach/26</attach_topic>
+      <output_topic>/skyscrub/water/state/26</output_topic>
+    </plugin>
+    <model name="water_packet_27">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_27</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/27</detach_topic>
+      <attach_topic>/skyscrub/water/attach/27</attach_topic>
+      <output_topic>/skyscrub/water/state/27</output_topic>
+    </plugin>
+    <model name="water_packet_28">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_28</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/28</detach_topic>
+      <attach_topic>/skyscrub/water/attach/28</attach_topic>
+      <output_topic>/skyscrub/water/state/28</output_topic>
+    </plugin>
+    <model name="water_packet_29">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_29</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/29</detach_topic>
+      <attach_topic>/skyscrub/water/attach/29</attach_topic>
+      <output_topic>/skyscrub/water/state/29</output_topic>
+    </plugin>
+    <model name="water_packet_30">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_30</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/30</detach_topic>
+      <attach_topic>/skyscrub/water/attach/30</attach_topic>
+      <output_topic>/skyscrub/water/state/30</output_topic>
+    </plugin>
+    <model name="water_packet_31">
+      <pose>0.000 0.000 0.300 0 0 0</pose>
+      <static>false</static>
+      <link name="water">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.250000</mass>
+          <inertia>
+            <ixx>0.00004000</ixx>
+            <iyy>0.00004000</iyy>
+            <izz>0.00004000</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+      <parent_link>base_link</parent_link>
+      <child_model>water_packet_31</child_model>
+      <child_link>water</child_link>
+      <detach_topic>/skyscrub/water/detach/31</detach_topic>
+      <attach_topic>/skyscrub/water/attach/31</attach_topic>
+      <output_topic>/skyscrub/water/state/31</output_topic>
     </plugin>
   </model>
 </sdf>
