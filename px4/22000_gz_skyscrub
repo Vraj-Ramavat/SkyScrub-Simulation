@@ -30,33 +30,33 @@ param set-default CA_ROTOR_COUNT 6
 # Gazebo Y is reflected when converted to PX4 body coordinates.
 
 # Motor 0 - CW
-param set-default CA_ROTOR0_PX 0.000
-param set-default CA_ROTOR0_PY -0.702
+param set-default CA_ROTOR0_PX 0.000000
+param set-default CA_ROTOR0_PY -0.703500
 param set-default CA_ROTOR0_KM -0.05
 
 # Motor 1 - CCW
-param set-default CA_ROTOR1_PX 0.000
-param set-default CA_ROTOR1_PY 0.702
+param set-default CA_ROTOR1_PX 0.000000
+param set-default CA_ROTOR1_PY 0.703500
 param set-default CA_ROTOR1_KM 0.05
 
 # Motor 2 - CW
-param set-default CA_ROTOR2_PX 0.608
-param set-default CA_ROTOR2_PY 0.351
+param set-default CA_ROTOR2_PX 0.609249
+param set-default CA_ROTOR2_PY 0.351750
 param set-default CA_ROTOR2_KM -0.05
 
 # Motor 3 - CCW
-param set-default CA_ROTOR3_PX -0.608
-param set-default CA_ROTOR3_PY -0.351
+param set-default CA_ROTOR3_PX -0.609249
+param set-default CA_ROTOR3_PY -0.351750
 param set-default CA_ROTOR3_KM 0.05
 
 # Motor 4 - CCW
-param set-default CA_ROTOR4_PX 0.608
-param set-default CA_ROTOR4_PY -0.351
+param set-default CA_ROTOR4_PX 0.609249
+param set-default CA_ROTOR4_PY -0.351750
 param set-default CA_ROTOR4_KM 0.05
 
 # Motor 5 - CW
-param set-default CA_ROTOR5_PX -0.608
-param set-default CA_ROTOR5_PY 0.351
+param set-default CA_ROTOR5_PX -0.609249
+param set-default CA_ROTOR5_PY 0.351750
 param set-default CA_ROTOR5_KM -0.05
 
 
@@ -82,16 +82,16 @@ param set-default SIM_GZ_EC_MIN4 120
 param set-default SIM_GZ_EC_MIN5 120
 param set-default SIM_GZ_EC_MIN6 120
 
-param set-default SIM_GZ_EC_MAX1 800
-param set-default SIM_GZ_EC_MAX2 800
-param set-default SIM_GZ_EC_MAX3 800
-param set-default SIM_GZ_EC_MAX4 800
-param set-default SIM_GZ_EC_MAX5 800
-param set-default SIM_GZ_EC_MAX6 800
+param set-default SIM_GZ_EC_MAX1 649
+param set-default SIM_GZ_EC_MAX2 649
+param set-default SIM_GZ_EC_MAX3 649
+param set-default SIM_GZ_EC_MAX4 649
+param set-default SIM_GZ_EC_MAX5 649
+param set-default SIM_GZ_EC_MAX6 649
 
 # Temporary V0.1 estimate.
 # We will tune this after validating actual loaded mass.
-param set-default MPC_THR_HOVER 0.40
+param set-default MPC_THR_HOVER 0.558
 
 # Retain datalink-loss safety
 param set-default NAV_DLL_ACT 2
