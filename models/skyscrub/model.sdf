@@ -221,9 +221,9 @@
       <inertial>
         <mass>0.107000</mass>
         <inertia>
-          <ixx>0.00152158</ixx>
-          <iyy>0.00152158</iyy>
-          <izz>0.00304317</izz>
+          <ixx>0.00228295</ixx>
+          <iyy>0.00228295</iyy>
+          <izz>0.00456475</izz>
         </inertia>
       </inertial>
       <visual name="rotor_0_visual">
@@ -248,9 +248,9 @@
       <inertial>
         <mass>0.107000</mass>
         <inertia>
-          <ixx>0.00152158</ixx>
-          <iyy>0.00152158</iyy>
-          <izz>0.00304317</izz>
+          <ixx>0.00228295</ixx>
+          <iyy>0.00228295</iyy>
+          <izz>0.00456475</izz>
         </inertia>
       </inertial>
       <visual name="rotor_1_visual">
@@ -275,9 +275,9 @@
       <inertial>
         <mass>0.107000</mass>
         <inertia>
-          <ixx>0.00152158</ixx>
-          <iyy>0.00152158</iyy>
-          <izz>0.00304317</izz>
+          <ixx>0.00228295</ixx>
+          <iyy>0.00228295</iyy>
+          <izz>0.00456475</izz>
         </inertia>
       </inertial>
       <visual name="rotor_2_visual">
@@ -302,9 +302,9 @@
       <inertial>
         <mass>0.107000</mass>
         <inertia>
-          <ixx>0.00152158</ixx>
-          <iyy>0.00152158</iyy>
-          <izz>0.00304317</izz>
+          <ixx>0.00228295</ixx>
+          <iyy>0.00228295</iyy>
+          <izz>0.00456475</izz>
         </inertia>
       </inertial>
       <visual name="rotor_3_visual">
@@ -329,9 +329,9 @@
       <inertial>
         <mass>0.107000</mass>
         <inertia>
-          <ixx>0.00152158</ixx>
-          <iyy>0.00152158</iyy>
-          <izz>0.00304317</izz>
+          <ixx>0.00228295</ixx>
+          <iyy>0.00228295</iyy>
+          <izz>0.00456475</izz>
         </inertia>
       </inertial>
       <visual name="rotor_4_visual">
@@ -356,9 +356,9 @@
       <inertial>
         <mass>0.107000</mass>
         <inertia>
-          <ixx>0.00152158</ixx>
-          <iyy>0.00152158</iyy>
-          <izz>0.00304317</izz>
+          <ixx>0.00228295</ixx>
+          <iyy>0.00228295</iyy>
+          <izz>0.00456475</izz>
         </inertia>
       </inertial>
       <visual name="rotor_5_visual">

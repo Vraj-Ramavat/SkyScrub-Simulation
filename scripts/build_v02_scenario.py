@@ -254,14 +254,25 @@ def modify_sdf(total_mass):
     # Rotor links
     # -------------------------------------------------------------
 
-    # Axisymmetric approximation for rotating 23-inch propeller.
+    # Axisymmetric finite-thickness approximation for the rotating
+    # 23-inch propeller. Using finite thickness avoids the degenerate
+    # thin-disc inertia condition rejected by Gazebo.
+    prop_thickness = 0.008
+
+    prop_ixx = (
+        PROP_MASS
+        * (
+            3.0 * PROP_RADIUS ** 2
+            + prop_thickness ** 2
+        )
+        / 12.0
+    )
+
     prop_izz = (
-        (1.0 / 3.0)
+        0.5
         * PROP_MASS
         * PROP_RADIUS ** 2
     )
-
-    prop_ixx = prop_izz / 2.0
 
     for i, (rx, ry) in enumerate(rotor_positions):
         rotor = model.find(f"./link[@name='rotor_{i}']")
